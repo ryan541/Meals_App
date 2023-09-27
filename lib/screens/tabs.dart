@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:navigator_setup/screens/meals.dart';
 
 import '../models/meals.dart';
+import '../widgets/main_drawer.dart';
 import 'categories.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -65,6 +66,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(activeTitle),
       ),
+      drawer: const MainDrawer(),
       body: activeScreen,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPage,
